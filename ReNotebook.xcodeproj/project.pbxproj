@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59071C552754FFBF0043D48C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C542754FFBF0043D48C /* AppDelegate.swift */; };
+		59071C572754FFBF0043D48C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C562754FFBF0043D48C /* SceneDelegate.swift */; };
+		59071C592754FFBF0043D48C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C582754FFBF0043D48C /* ViewController.swift */; };
+		59071C5E2754FFC30043D48C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59071C5D2754FFC30043D48C /* Assets.xcassets */; };
+		59071C612754FFC30043D48C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */; };
+		59071C6C2754FFC30043D48C /* ReNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C6B2754FFC30043D48C /* ReNotebookTests.swift */; };
+		59071C772754FFC30043D48C /* ReNotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C762754FFC30043D48C /* ReNotebookUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59071C682754FFC30043D48C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59071C492754FFBF0043D48C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59071C502754FFBF0043D48C;
+			remoteInfo = ReNotebook;
+		};
+		59071C732754FFC30043D48C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59071C492754FFBF0043D48C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59071C502754FFBF0043D48C;
+			remoteInfo = ReNotebook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59071C512754FFBF0043D48C /* ReNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59071C542754FFBF0043D48C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59071C562754FFBF0043D48C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		59071C582754FFBF0043D48C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59071C5D2754FFC30043D48C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59071C602754FFC30043D48C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59071C622754FFC30043D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59071C672754FFC30043D48C /* ReNotebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReNotebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59071C6B2754FFC30043D48C /* ReNotebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNotebookTests.swift; sourceTree = "<group>"; };
+		59071C6D2754FFC30043D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59071C722754FFC30043D48C /* ReNotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReNotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59071C762754FFC30043D48C /* ReNotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNotebookUITests.swift; sourceTree = "<group>"; };
+		59071C782754FFC30043D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59071C4E2754FFBF0043D48C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59071C642754FFC30043D48C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59071C6F2754FFC30043D48C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59071C482754FFBF0043D48C = {
+			isa = PBXGroup;
+			children = (
+				59071C532754FFBF0043D48C /* ReNotebook */,
+				59071C6A2754FFC30043D48C /* ReNotebookTests */,
+				59071C752754FFC30043D48C /* ReNotebookUITests */,
+				59071C522754FFBF0043D48C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59071C522754FFBF0043D48C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59071C512754FFBF0043D48C /* ReNotebook.app */,
+				59071C672754FFC30043D48C /* ReNotebookTests.xctest */,
+				59071C722754FFC30043D48C /* ReNotebookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59071C532754FFBF0043D48C /* ReNotebook */ = {
+			isa = PBXGroup;
+			children = (
+				59071C542754FFBF0043D48C /* AppDelegate.swift */,
+				59071C562754FFBF0043D48C /* SceneDelegate.swift */,
+				59071C582754FFBF0043D48C /* ViewController.swift */,
+				59071C5D2754FFC30043D48C /* Assets.xcassets */,
+				59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */,
+				59071C622754FFC30043D48C /* Info.plist */,
+			);
+			path = ReNotebook;
+			sourceTree = "<group>";
+		};
+		59071C6A2754FFC30043D48C /* ReNotebookTests */ = {
+			isa = PBXGroup;
+			children = (
+				59071C6B2754FFC30043D48C /* ReNotebookTests.swift */,
+				59071C6D2754FFC30043D48C /* Info.plist */,
+			);
+			path = ReNotebookTests;
+			sourceTree = "<group>";
+		};
+		59071C752754FFC30043D48C /* ReNotebookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59071C762754FFC30043D48C /* ReNotebookUITests.swift */,
+				59071C782754FFC30043D48C /* Info.plist */,
+			);
+			path = ReNotebookUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59071C502754FFBF0043D48C /* ReNotebook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59071C7B2754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebook" */;
+			buildPhases = (
+				59071C4D2754FFBF0043D48C /* Sources */,
+				59071C4E2754FFBF0043D48C /* Frameworks */,
+				59071C4F2754FFBF0043D48C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReNotebook;
+			productName = ReNotebook;
+			productReference = 59071C512754FFBF0043D48C /* ReNotebook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59071C662754FFC30043D48C /* ReNotebookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59071C7E2754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebookTests" */;
+			buildPhases = (
+				59071C632754FFC30043D48C /* Sources */,
+				59071C642754FFC30043D48C /* Frameworks */,
+				59071C652754FFC30043D48C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59071C692754FFC30043D48C /* PBXTargetDependency */,
+			);
+			name = ReNotebookTests;
+			productName = ReNotebookTests;
+			productReference = 59071C672754FFC30043D48C /* ReNotebookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59071C712754FFC30043D48C /* ReNotebookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59071C812754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebookUITests" */;
+			buildPhases = (
+				59071C6E2754FFC30043D48C /* Sources */,
+				59071C6F2754FFC30043D48C /* Frameworks */,
+				59071C702754FFC30043D48C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59071C742754FFC30043D48C /* PBXTargetDependency */,
+			);
+			name = ReNotebookUITests;
+			productName = ReNotebookUITests;
+			productReference = 59071C722754FFC30043D48C /* ReNotebookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59071C492754FFBF0043D48C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					59071C502754FFBF0043D48C = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					59071C662754FFC30043D48C = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 59071C502754FFBF0043D48C;
+					};
+					59071C712754FFC30043D48C = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 59071C502754FFBF0043D48C;
+					};
+				};
+			};
+			buildConfigurationList = 59071C4C2754FFBF0043D48C /* Build configuration list for PBXProject "ReNotebook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59071C482754FFBF0043D48C;
+			productRefGroup = 59071C522754FFBF0043D48C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59071C502754FFBF0043D48C /* ReNotebook */,
+				59071C662754FFC30043D48C /* ReNotebookTests */,
+				59071C712754FFC30043D48C /* ReNotebookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59071C4F2754FFBF0043D48C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59071C612754FFC30043D48C /* LaunchScreen.storyboard in Resources */,
+				59071C5E2754FFC30043D48C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59071C652754FFC30043D48C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59071C702754FFC30043D48C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59071C4D2754FFBF0043D48C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59071C592754FFBF0043D48C /* ViewController.swift in Sources */,
+				59071C552754FFBF0043D48C /* AppDelegate.swift in Sources */,
+				59071C572754FFBF0043D48C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59071C632754FFC30043D48C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59071C6C2754FFC30043D48C /* ReNotebookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59071C6E2754FFC30043D48C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59071C772754FFC30043D48C /* ReNotebookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59071C692754FFC30043D48C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59071C502754FFBF0043D48C /* ReNotebook */;
+			targetProxy = 59071C682754FFC30043D48C /* PBXContainerItemProxy */;
+		};
+		59071C742754FFC30043D48C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59071C502754FFBF0043D48C /* ReNotebook */;
+			targetProxy = 59071C732754FFC30043D48C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59071C602754FFC30043D48C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59071C792754FFC30043D48C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59071C7A2754FFC30043D48C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59071C7C2754FFC30043D48C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T96KB8H453;
+				INFOPLIST_FILE = ReNotebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.maksimn.ReNotebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59071C7D2754FFC30043D48C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T96KB8H453;
+				INFOPLIST_FILE = ReNotebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.maksimn.ReNotebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		59071C7F2754FFC30043D48C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T96KB8H453;
+				INFOPLIST_FILE = ReNotebookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.maksimn.ReNotebookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReNotebook.app/ReNotebook";
+			};
+			name = Debug;
+		};
+		59071C802754FFC30043D48C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T96KB8H453;
+				INFOPLIST_FILE = ReNotebookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.maksimn.ReNotebookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReNotebook.app/ReNotebook";
+			};
+			name = Release;
+		};
+		59071C822754FFC30043D48C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T96KB8H453;
+				INFOPLIST_FILE = ReNotebookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.maksimn.ReNotebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReNotebook;
+			};
+			name = Debug;
+		};
+		59071C832754FFC30043D48C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T96KB8H453;
+				INFOPLIST_FILE = ReNotebookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.maksimn.ReNotebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReNotebook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59071C4C2754FFBF0043D48C /* Build configuration list for PBXProject "ReNotebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59071C792754FFC30043D48C /* Debug */,
+				59071C7A2754FFC30043D48C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59071C7B2754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59071C7C2754FFC30043D48C /* Debug */,
+				59071C7D2754FFC30043D48C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59071C7E2754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59071C7F2754FFC30043D48C /* Debug */,
+				59071C802754FFC30043D48C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59071C812754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59071C822754FFC30043D48C /* Debug */,
+				59071C832754FFC30043D48C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59071C492754FFBF0043D48C /* Project object */;
+}
