@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AF700BAE02279716735A028 /* Pods_ReNotebook_ReNotebookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71471C1C0692B74EE9009C51 /* Pods_ReNotebook_ReNotebookUITests.framework */; };
 		59071C552754FFBF0043D48C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C542754FFBF0043D48C /* AppDelegate.swift */; };
 		59071C572754FFBF0043D48C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C562754FFBF0043D48C /* SceneDelegate.swift */; };
 		59071C592754FFBF0043D48C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C582754FFBF0043D48C /* ViewController.swift */; };
@@ -14,6 +15,8 @@
 		59071C612754FFC30043D48C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */; };
 		59071C6C2754FFC30043D48C /* ReNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C6B2754FFC30043D48C /* ReNotebookTests.swift */; };
 		59071C772754FFC30043D48C /* ReNotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C762754FFC30043D48C /* ReNotebookUITests.swift */; };
+		618110D1EBA3675222BCB803 /* Pods_ReNotebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4B73776E77AA9DD470DEC2 /* Pods_ReNotebook.framework */; };
+		F41DF014CC0769184B476B4E /* Pods_ReNotebookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8941D0A1E85CF990DCDC1D /* Pods_ReNotebookTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B8941D0A1E85CF990DCDC1D /* Pods_ReNotebookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReNotebookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DE3722EB765ED895031528 /* Pods-ReNotebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebook.debug.xcconfig"; path = "Target Support Files/Pods-ReNotebook/Pods-ReNotebook.debug.xcconfig"; sourceTree = "<group>"; };
+		493F560C06C3D83B0EEA3B72 /* Pods-ReNotebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebook.release.xcconfig"; path = "Target Support Files/Pods-ReNotebook/Pods-ReNotebook.release.xcconfig"; sourceTree = "<group>"; };
 		59071C512754FFBF0043D48C /* ReNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59071C542754FFBF0043D48C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59071C562754FFBF0043D48C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		59071C722754FFC30043D48C /* ReNotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReNotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59071C762754FFC30043D48C /* ReNotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNotebookUITests.swift; sourceTree = "<group>"; };
 		59071C782754FFC30043D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61313236377EB5E75EE505A9 /* Pods-ReNotebookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.release.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.release.xcconfig"; sourceTree = "<group>"; };
+		69B88A351E0C675E71F64646 /* Pods-ReNotebookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.debug.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71471C1C0692B74EE9009C51 /* Pods_ReNotebook_ReNotebookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReNotebook_ReNotebookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4B73776E77AA9DD470DEC2 /* Pods_ReNotebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReNotebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1959F9154CAD9326A93F8A8 /* Pods-ReNotebook-ReNotebookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebook-ReNotebookUITests.release.xcconfig"; path = "Target Support Files/Pods-ReNotebook-ReNotebookUITests/Pods-ReNotebook-ReNotebookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED5DAC2E5EA92BFCD1806B3F /* Pods-ReNotebook-ReNotebookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebook-ReNotebookUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReNotebook-ReNotebookUITests/Pods-ReNotebook-ReNotebookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618110D1EBA3675222BCB803 /* Pods_ReNotebook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41DF014CC0769184B476B4E /* Pods_ReNotebookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AF700BAE02279716735A028 /* Pods_ReNotebook_ReNotebookUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5568FF766BD3C31262BD31D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34DE3722EB765ED895031528 /* Pods-ReNotebook.debug.xcconfig */,
+				493F560C06C3D83B0EEA3B72 /* Pods-ReNotebook.release.xcconfig */,
+				ED5DAC2E5EA92BFCD1806B3F /* Pods-ReNotebook-ReNotebookUITests.debug.xcconfig */,
+				E1959F9154CAD9326A93F8A8 /* Pods-ReNotebook-ReNotebookUITests.release.xcconfig */,
+				69B88A351E0C675E71F64646 /* Pods-ReNotebookTests.debug.xcconfig */,
+				61313236377EB5E75EE505A9 /* Pods-ReNotebookTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		59071C482754FFBF0043D48C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				59071C6A2754FFC30043D48C /* ReNotebookTests */,
 				59071C752754FFC30043D48C /* ReNotebookUITests */,
 				59071C522754FFBF0043D48C /* Products */,
+				5568FF766BD3C31262BD31D8 /* Pods */,
+				D30E92E6772F4757739EB473 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = ReNotebookUITests;
 			sourceTree = "<group>";
 		};
+		D30E92E6772F4757739EB473 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B73776E77AA9DD470DEC2 /* Pods_ReNotebook.framework */,
+				71471C1C0692B74EE9009C51 /* Pods_ReNotebook_ReNotebookUITests.framework */,
+				2B8941D0A1E85CF990DCDC1D /* Pods_ReNotebookTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,7 +172,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59071C7B2754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebook" */;
 			buildPhases = (
+				223D75879D9C1DC9890B7FD7 /* [CP] Check Pods Manifest.lock */,
 				59071C4D2754FFBF0043D48C /* Sources */,
+				599CF7F827553BC100F07EA6 /* ShellScript */,
 				59071C4E2754FFBF0043D48C /* Frameworks */,
 				59071C4F2754FFBF0043D48C /* Resources */,
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59071C7E2754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebookTests" */;
 			buildPhases = (
+				763FBDE2EE29CA458273ADD5 /* [CP] Check Pods Manifest.lock */,
 				59071C632754FFC30043D48C /* Sources */,
 				59071C642754FFC30043D48C /* Frameworks */,
 				59071C652754FFC30043D48C /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59071C812754FFC30043D48C /* Build configuration list for PBXNativeTarget "ReNotebookUITests" */;
 			buildPhases = (
+				8C83398927D6D15B0949B68C /* [CP] Check Pods Manifest.lock */,
 				59071C6E2754FFC30043D48C /* Sources */,
 				59071C6F2754FFC30043D48C /* Frameworks */,
 				59071C702754FFC30043D48C /* Resources */,
@@ -248,6 +292,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		223D75879D9C1DC9890B7FD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReNotebook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		599CF7F827553BC100F07EA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		763FBDE2EE29CA458273ADD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReNotebookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C83398927D6D15B0949B68C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReNotebook-ReNotebookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		59071C4D2754FFBF0043D48C /* Sources */ = {
@@ -421,6 +551,7 @@
 		};
 		59071C7C2754FFC30043D48C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DE3722EB765ED895031528 /* Pods-ReNotebook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +571,7 @@
 		};
 		59071C7D2754FFC30043D48C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493F560C06C3D83B0EEA3B72 /* Pods-ReNotebook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +591,7 @@
 		};
 		59071C7F2754FFC30043D48C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69B88A351E0C675E71F64646 /* Pods-ReNotebookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -481,6 +614,7 @@
 		};
 		59071C802754FFC30043D48C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61313236377EB5E75EE505A9 /* Pods-ReNotebookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +637,7 @@
 		};
 		59071C822754FFC30043D48C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED5DAC2E5EA92BFCD1806B3F /* Pods-ReNotebook-ReNotebookUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +658,7 @@
 		};
 		59071C832754FFC30043D48C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1959F9154CAD9326A93F8A8 /* Pods-ReNotebook-ReNotebookUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
