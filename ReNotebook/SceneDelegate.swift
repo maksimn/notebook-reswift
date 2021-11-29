@@ -16,10 +16,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let viewController = ViewController()
+        let viewParams = NewWordViewParams(
+            staticContent: NewWordViewStaticContent(
+                selectButtonTitle: NSLocalizedString("Select", comment: ""),
+                arrowText: NSLocalizedString("⇋", comment: ""),
+                okText: NSLocalizedString("OK", comment: ""),
+                textFieldPlaceholder: NSLocalizedString("Enter a new word", comment: "")
+            ),
+            styles: NewWordViewStyles(backgroundColor: UIColor(red: 0.97, green: 0.97, blue: 0.95, alpha: 1.0))
+        )
+        let newWordViewController = NewWordViewController(params: viewParams)
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = viewController
+        window?.rootViewController = newWordViewController
         window?.makeKeyAndVisible()
     }
 }
