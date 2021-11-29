@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		59071C612754FFC30043D48C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */; };
 		59071C6C2754FFC30043D48C /* ReNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C6B2754FFC30043D48C /* ReNotebookTests.swift */; };
 		59071C772754FFC30043D48C /* ReNotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C762754FFC30043D48C /* ReNotebookUITests.swift */; };
+		598E80452755649300CC61EA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E80442755649300CC61EA /* Store.swift */; };
 		618110D1EBA3675222BCB803 /* Pods_ReNotebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4B73776E77AA9DD470DEC2 /* Pods_ReNotebook.framework */; };
 		F41DF014CC0769184B476B4E /* Pods_ReNotebookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8941D0A1E85CF990DCDC1D /* Pods_ReNotebookTests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		59071C722754FFC30043D48C /* ReNotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReNotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59071C762754FFC30043D48C /* ReNotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNotebookUITests.swift; sourceTree = "<group>"; };
 		59071C782754FFC30043D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		598E80442755649300CC61EA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		61313236377EB5E75EE505A9 /* Pods-ReNotebookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.release.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.release.xcconfig"; sourceTree = "<group>"; };
 		69B88A351E0C675E71F64646 /* Pods-ReNotebookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.debug.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71471C1C0692B74EE9009C51 /* Pods_ReNotebook_ReNotebookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReNotebook_ReNotebookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 			children = (
 				59071C542754FFBF0043D48C /* AppDelegate.swift */,
 				59071C562754FFBF0043D48C /* SceneDelegate.swift */,
+				598E80442755649300CC61EA /* Store.swift */,
 				59071C582754FFBF0043D48C /* ViewController.swift */,
 				59071C5D2754FFC30043D48C /* Assets.xcassets */,
 				59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 				599CF7F827553BC100F07EA6 /* ShellScript */,
 				59071C4E2754FFBF0043D48C /* Frameworks */,
 				59071C4F2754FFBF0043D48C /* Resources */,
+				1B40342C84FD6E4B9BAD14D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +218,7 @@
 				59071C6E2754FFC30043D48C /* Sources */,
 				59071C6F2754FFC30043D48C /* Frameworks */,
 				59071C702754FFC30043D48C /* Resources */,
+				F734CE3A49A5E4D6F865FFF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +299,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B40342C84FD6E4B9BAD14D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReNotebook/Pods-ReNotebook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReNotebook/Pods-ReNotebook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReNotebook/Pods-ReNotebook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		223D75879D9C1DC9890B7FD7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +399,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F734CE3A49A5E4D6F865FFF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReNotebook-ReNotebookUITests/Pods-ReNotebook-ReNotebookUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReNotebook-ReNotebookUITests/Pods-ReNotebook-ReNotebookUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReNotebook-ReNotebookUITests/Pods-ReNotebook-ReNotebookUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -387,6 +426,7 @@
 				59071C592754FFBF0043D48C /* ViewController.swift in Sources */,
 				59071C552754FFBF0043D48C /* AppDelegate.swift in Sources */,
 				59071C572754FFBF0043D48C /* SceneDelegate.swift in Sources */,
+				598E80452755649300CC61EA /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

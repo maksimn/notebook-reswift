@@ -5,6 +5,10 @@ target 'ReNotebook' do
 
   # Pods for ReNotebook
 
+  pod 'ReSwift'
+  pod 'RxCocoa', '5.1'
+  pod 'RxSwift', '5.1'
+  pod 'SnapKit', '~> 4.0'
   pod 'SwiftLint'
 
   target 'ReNotebookTests' do
