@@ -8,15 +8,15 @@
 import ReSwift
 
 struct AppState {
-
+    var newWord: NewWordState
 }
 
 func appReducer(action: Action, state: AppState?) -> AppState {
-    return AppState()
+    AppState(newWord: newWordReducer(action: action, state: state?.newWord))
 }
 
 let store = Store(
     reducer: appReducer,
-    state: AppState(),
+    state: nil,
     middleware: []
 )

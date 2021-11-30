@@ -14,6 +14,7 @@
 		59071C612754FFC30043D48C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */; };
 		59071C6C2754FFC30043D48C /* ReNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C6B2754FFC30043D48C /* ReNotebookTests.swift */; };
 		59071C772754FFC30043D48C /* ReNotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C762754FFC30043D48C /* ReNotebookUITests.swift */; };
+		594534E72755F08200DD9DF2 /* initNewWordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594534E62755F08200DD9DF2 /* initNewWordState.swift */; };
 		598E80452755649300CC61EA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E80442755649300CC61EA /* Store.swift */; };
 		598E804E27559A8B00CC61EA /* NewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E804D27559A8B00CC61EA /* NewWordViewController.swift */; };
 		598E805327559ABB00CC61EA /* NewWordViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E805227559ABB00CC61EA /* NewWordViewParams.swift */; };
@@ -21,6 +22,9 @@
 		598E805F27559B2200CC61EA /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E805E27559B2200CC61EA /* Lang.swift */; };
 		598E806527559B4900CC61EA /* Tagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E806427559B4900CC61EA /* Tagged.swift */; };
 		598E806D27559BB300CC61EA /* NewWordViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E806C27559BB300CC61EA /* NewWordViewController+Layout.swift */; };
+		598E807A2755A66200CC61EA /* NewWordAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E80792755A66200CC61EA /* NewWordAction.swift */; };
+		598E80802755A69200CC61EA /* NewWordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E807F2755A69200CC61EA /* NewWordState.swift */; };
+		598E80862755A6C600CC61EA /* newWordReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E80852755A6C600CC61EA /* newWordReducer.swift */; };
 		618110D1EBA3675222BCB803 /* Pods_ReNotebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4B73776E77AA9DD470DEC2 /* Pods_ReNotebook.framework */; };
 		F41DF014CC0769184B476B4E /* Pods_ReNotebookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8941D0A1E85CF990DCDC1D /* Pods_ReNotebookTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +62,7 @@
 		59071C722754FFC30043D48C /* ReNotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReNotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59071C762754FFC30043D48C /* ReNotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNotebookUITests.swift; sourceTree = "<group>"; };
 		59071C782754FFC30043D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594534E62755F08200DD9DF2 /* initNewWordState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initNewWordState.swift; sourceTree = "<group>"; };
 		598E80442755649300CC61EA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		598E804D27559A8B00CC61EA /* NewWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewController.swift; sourceTree = "<group>"; };
 		598E805227559ABB00CC61EA /* NewWordViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewParams.swift; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 		598E805E27559B2200CC61EA /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		598E806427559B4900CC61EA /* Tagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagged.swift; sourceTree = "<group>"; };
 		598E806C27559BB300CC61EA /* NewWordViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewWordViewController+Layout.swift"; sourceTree = "<group>"; };
+		598E80792755A66200CC61EA /* NewWordAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordAction.swift; sourceTree = "<group>"; };
+		598E807F2755A69200CC61EA /* NewWordState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordState.swift; sourceTree = "<group>"; };
+		598E80852755A6C600CC61EA /* newWordReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newWordReducer.swift; sourceTree = "<group>"; };
 		61313236377EB5E75EE505A9 /* Pods-ReNotebookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.release.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.release.xcconfig"; sourceTree = "<group>"; };
 		69B88A351E0C675E71F64646 /* Pods-ReNotebookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.debug.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71471C1C0692B74EE9009C51 /* Pods_ReNotebook_ReNotebookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReNotebook_ReNotebookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +150,7 @@
 				598E806327559B3900CC61EA /* Core */,
 				598E805D27559B1700CC61EA /* DataClass */,
 				598E805727559AD000CC61EA /* DesignSystem */,
-				598E804C27559A6C00CC61EA /* NewWord */,
+				594534EB2755F0FB00DD9DF2 /* Feature */,
 				59071C542754FFBF0043D48C /* AppDelegate.swift */,
 				59071C562754FFBF0043D48C /* SceneDelegate.swift */,
 				598E80442755649300CC61EA /* Store.swift */,
@@ -171,12 +179,21 @@
 			path = ReNotebookUITests;
 			sourceTree = "<group>";
 		};
+		594534EB2755F0FB00DD9DF2 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				598E804C27559A6C00CC61EA /* NewWord */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		598E804C27559A6C00CC61EA /* NewWord */ = {
 			isa = PBXGroup;
 			children = (
-				598E804D27559A8B00CC61EA /* NewWordViewController.swift */,
-				598E806C27559BB300CC61EA /* NewWordViewController+Layout.swift */,
-				598E805227559ABB00CC61EA /* NewWordViewParams.swift */,
+				598E80782755A63E00CC61EA /* Action */,
+				598E80842755A6AF00CC61EA /* Reducer */,
+				598E807E2755A68100CC61EA /* State */,
+				598E80772755A61B00CC61EA /* View */,
 			);
 			path = NewWord;
 			sourceTree = "<group>";
@@ -203,6 +220,41 @@
 				598E806427559B4900CC61EA /* Tagged.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		598E80772755A61B00CC61EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				598E804D27559A8B00CC61EA /* NewWordViewController.swift */,
+				598E806C27559BB300CC61EA /* NewWordViewController+Layout.swift */,
+				598E805227559ABB00CC61EA /* NewWordViewParams.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		598E80782755A63E00CC61EA /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				598E80792755A66200CC61EA /* NewWordAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		598E807E2755A68100CC61EA /* State */ = {
+			isa = PBXGroup;
+			children = (
+				598E807F2755A69200CC61EA /* NewWordState.swift */,
+				594534E62755F08200DD9DF2 /* initNewWordState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		598E80842755A6AF00CC61EA /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				598E80852755A6C600CC61EA /* newWordReducer.swift */,
+			);
+			path = Reducer;
 			sourceTree = "<group>";
 		};
 		D30E92E6772F4757739EB473 /* Frameworks */ = {
@@ -470,15 +522,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598E80802755A69200CC61EA /* NewWordState.swift in Sources */,
 				59071C552754FFBF0043D48C /* AppDelegate.swift in Sources */,
 				598E804E27559A8B00CC61EA /* NewWordViewController.swift in Sources */,
 				59071C572754FFBF0043D48C /* SceneDelegate.swift in Sources */,
 				598E80452755649300CC61EA /* Store.swift in Sources */,
 				598E806D27559BB300CC61EA /* NewWordViewController+Layout.swift in Sources */,
 				598E806527559B4900CC61EA /* Tagged.swift in Sources */,
+				598E807A2755A66200CC61EA /* NewWordAction.swift in Sources */,
 				598E805927559ADE00CC61EA /* ViewParams.swift in Sources */,
 				598E805327559ABB00CC61EA /* NewWordViewParams.swift in Sources */,
+				594534E72755F08200DD9DF2 /* initNewWordState.swift in Sources */,
 				598E805F27559B2200CC61EA /* Lang.swift in Sources */,
+				598E80862755A6C600CC61EA /* newWordReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

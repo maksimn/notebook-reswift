@@ -5,9 +5,10 @@
 //  Created by Maxim Ivanov on 30.11.2021.
 //
 
+import ReSwift
 import UIKit
 
-class NewWordViewController: UIViewController {
+class NewWordViewController: UIViewController, StoreSubscriber {
 
     let params: NewWordViewParams
 
@@ -30,17 +31,26 @@ class NewWordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
+        store.subscribe(self) { subcription in
+            subcription.select { state in state.newWord }
+        }
     }
 
-    func set(text: String) {
+    func newState(state: NewWordState) {
+        set(text: state.text)
+        set(sourceLang: state.sourceLang)
+        set(targetLang: state.targetLang)
+    }
+
+    private func set(text: String) {
         textField.text = text
     }
 
-    func set(sourceLang: Lang) {
+    private func set(sourceLang: Lang) {
         sourceLangLabel.text = sourceLang.name
     }
 
-    func set(targetLang: Lang) {
+    private func set(targetLang: Lang) {
         targetLangLabel.text = targetLang.name
     }
 
@@ -69,7 +79,7 @@ extension NewWordViewController: UITextFieldDelegate {
 
     @objc
     func textFieldDidChange(_ textField: UITextField) {
-
+        store.dispatch(NewWordTextChangedAction(text: textField.text ?? ""))
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
