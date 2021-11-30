@@ -18,5 +18,5 @@ func appReducer(action: Action, state: AppState?) -> AppState {
 let store = Store(
     reducer: appReducer,
     state: nil,
-    middleware: []
+    middleware: [loggingMiddleware]
 )
