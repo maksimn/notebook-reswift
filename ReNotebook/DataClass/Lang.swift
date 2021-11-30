@@ -17,3 +17,5 @@ struct Lang: Equatable {
         lhs.id == rhs.id
     }
 }
+
+enum SelectedLangType { case source, target }

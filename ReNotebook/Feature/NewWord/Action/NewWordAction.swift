@@ -7,8 +7,11 @@
 
 import ReSwift
 
-struct ShowNewWordEditorAction: Action { }
-
 struct NewWordTextChangedAction: Action {
     let text: String
+}
+
+struct ShowLangPickerAction: Action {
+    let selectedLangType: SelectedLangType
+    let selectedLang: Lang
 }

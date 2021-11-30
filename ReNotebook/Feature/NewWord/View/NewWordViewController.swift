@@ -19,6 +19,18 @@ class NewWordViewController: UIViewController, StoreSubscriber {
     let okButton = UIButton()
     let textField = UITextField()
 
+    var langPickerView: UIView?
+
+    private var state: NewWordState? {
+        didSet {
+            guard let state = state else { return }
+            textField.text = state.text
+            sourceLangLabel.text = state.sourceLang.name
+            targetLangLabel.text = state.targetLang.name
+            langPickerView?.isHidden = state.isLangPickerHidden
+        }
+    }
+
     init(params: NewWordViewParams) {
         self.params = params
         super.init(nibName: nil, bundle: nil)
@@ -31,31 +43,41 @@ class NewWordViewController: UIViewController, StoreSubscriber {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
+
+        langPickerView = LangPickerViewImpl(
+            params: LangPickerViewParams(
+                staticContent: LangPickerViewStaticContent(
+                    selectButtonTitle: NSLocalizedString("Select", comment: "")
+                ),
+                styles: LangPickerViewStyles(
+                    backgroundColor: params.styles.backgroundColor
+                )
+            )
+        )
+        view.addSubview(langPickerView ?? UIView())
+        langPickerView?.snp.makeConstraints { make -> Void in
+            make.edges.equalTo(contentView)
+        }
+
         store.subscribe(self) { subcription in
             subcription.select { state in state.newWord }
         }
     }
 
     func newState(state: NewWordState) {
-        set(text: state.text)
-        set(sourceLang: state.sourceLang)
-        set(targetLang: state.targetLang)
-    }
-
-    private func set(text: String) {
-        textField.text = text
-    }
-
-    private func set(sourceLang: Lang) {
-        sourceLangLabel.text = sourceLang.name
-    }
-
-    private func set(targetLang: Lang) {
-        targetLangLabel.text = targetLang.name
+        self.state = state
     }
 
     private func sendNewWordEventAndDismiss() {
         dismiss(animated: true, completion: nil)
+    }
+
+    private func showLangPickerView(selectedLangType: SelectedLangType) {
+        guard let state = state else { return }
+        let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang
+
+        store.dispatch(ShowLangPickerAction(selectedLangType: selectedLangType,
+                                            selectedLang: selectedLang))
     }
 }
 
@@ -64,17 +86,17 @@ extension NewWordViewController: UITextFieldDelegate {
 
     @objc
     func onSourceLangLabelTap() {
-
+        showLangPickerView(selectedLangType: .source)
     }
 
     @objc
     func onTargetLangLabelTap() {
-
+        showLangPickerView(selectedLangType: .target)
     }
 
     @objc
     func onOkButtonTap() {
-        sendNewWordEventAndDismiss()
+
     }
 
     @objc
