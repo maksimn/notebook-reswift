@@ -36,16 +36,20 @@ final class LangPickerViewImpl: UIView, StoreSubscriber {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - StoreSubscriber
+
     func newState(state: LangPickerState) {
         self.state = state
     }
 
-    func onSelectLang(_ lang: Lang) {
+    // MARK: - Private
+
+    private func onSelectLang(_ lang: Lang) {
         guard let state = state else { return }
         store.dispatch(SelectLangAction(lang: lang, langType: state.selectedLangType))
     }
 
-    func onFinish() {
+    private func onFinish() {
         store.dispatch(HideLangPickerAction())
     }
 

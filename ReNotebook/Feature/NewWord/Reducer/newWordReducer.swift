@@ -7,19 +7,10 @@
 
 import ReSwift
 
-private let defaultSourceLang = Lang(id: Lang.Id(raw: 1),
-                                     name: NSLocalizedString("English", comment: ""),
-                                     shortName: "EN")
-private let defaultTargetLang = Lang(id: Lang.Id(raw: 2),
-                                     name: NSLocalizedString("Russian", comment: ""),
-                                     shortName: "RU")
-private let initNewWordState = NewWordState(text: "",
-                                            sourceLang: defaultSourceLang,
-                                            targetLang: defaultTargetLang,
-                                            isLangPickerHidden: true)
-
 func newWordReducer(action: Action, state: NewWordState?) -> NewWordState {
-    var state = state ?? initNewWordState
+    let noLang = Lang(id: Lang.Id(raw: 0), name: "", shortName: "")
+    let empty = NewWordState(text: "", sourceLang: noLang, targetLang: noLang, isLangPickerHidden: true)
+    var state = state ?? empty
 
     switch action {
     case let newWordTextChangedAction as NewWordTextChangedAction:

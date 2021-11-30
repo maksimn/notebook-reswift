@@ -1,5 +1,5 @@
 //
-//  NewWordAction.swift
+//  Action.swift
 //  ReNotebook
 //
 //  Created by Maxim Ivanov on 30.11.2021.
@@ -14,4 +14,15 @@ struct NewWordTextChangedAction: Action {
 struct ShowLangPickerAction: Action {
     let selectedLangType: SelectedLangType
     let selectedLang: Lang
+}
+
+struct HideLangPickerAction: Action { }
+
+struct SelectLangAction: Action {
+    let lang: Lang
+    let langType: SelectedLangType
+}
+
+struct NewWordAction: Action {
+    let word: WordItem
 }

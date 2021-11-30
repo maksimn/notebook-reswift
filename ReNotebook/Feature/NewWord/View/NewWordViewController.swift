@@ -8,7 +8,7 @@
 import ReSwift
 import UIKit
 
-class NewWordViewController: UIViewController, StoreSubscriber {
+class NewWordViewController: UIViewController, StoreSubscriber, UITextFieldDelegate {
 
     let params: NewWordViewParams
 
@@ -64,25 +64,25 @@ class NewWordViewController: UIViewController, StoreSubscriber {
         }
     }
 
+    // MARK: - StoreSubscriber
+
     func newState(state: NewWordState) {
         self.state = state
     }
 
-    private func sendNewWordEventAndDismiss() {
-        dismiss(animated: true, completion: nil)
+    // MARK: - UITextFieldDelegate
+
+    @objc
+    func textFieldDidChange(_ textField: UITextField) {
+        store.dispatch(NewWordTextChangedAction(text: textField.text ?? ""))
     }
 
-    private func showLangPickerView(selectedLangType: SelectedLangType) {
-        guard let state = state else { return }
-        let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang
-
-        store.dispatch(ShowLangPickerAction(selectedLangType: selectedLangType,
-                                            selectedLang: selectedLang))
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sendNewWord()
+        return true
     }
-}
 
-// User Action handlers
-extension NewWordViewController: UITextFieldDelegate {
+    // MARK: - User Action Handlers
 
     @objc
     func onSourceLangLabelTap() {
@@ -96,16 +96,22 @@ extension NewWordViewController: UITextFieldDelegate {
 
     @objc
     func onOkButtonTap() {
-
+        sendNewWord()
     }
 
-    @objc
-    func textFieldDidChange(_ textField: UITextField) {
-        store.dispatch(NewWordTextChangedAction(text: textField.text ?? ""))
+    // MARK: - Private
+
+    private func showLangPickerView(selectedLangType: SelectedLangType) {
+        guard let state = state else { return }
+        let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang
+
+        store.dispatch(ShowLangPickerAction(selectedLangType: selectedLangType,
+                                            selectedLang: selectedLang))
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        sendNewWordEventAndDismiss()
-        return true
+    private func sendNewWord() {
+        guard let state = state else { return }
+        let word = WordItem(text: state.text, sourceLang: state.sourceLang, targetLang: state.targetLang)
+        store.dispatch(NewWordAction(word: word))
     }
 }

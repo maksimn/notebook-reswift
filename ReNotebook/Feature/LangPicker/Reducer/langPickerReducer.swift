@@ -7,22 +7,10 @@
 
 import ReSwift
 
-private let lang1 = Lang(id: Lang.Id(raw: 1), name: NSLocalizedString("English", comment: ""), shortName: "EN")
-private let lang2 = Lang(id: Lang.Id(raw: 2), name: NSLocalizedString("Russian", comment: ""), shortName: "RU")
-private let lang4 = Lang(id: Lang.Id(raw: 4), name: NSLocalizedString("Italian", comment: ""), shortName: "IT")
-private let lang5 = Lang(id: Lang.Id(raw: 5), name: NSLocalizedString("German", comment: ""), shortName: "DE")
-
-private let initState = LangPickerState(
-    isHidden: true,
-    selectedLangType: .source,
-    selectedLang: Lang(id: Lang.Id(raw: 1),
-                       name: NSLocalizedString("English", comment: ""),
-                       shortName: "EN"),
-    allLangs: [lang1, lang2, lang4, lang5]
-)
-
 func langPickerReducer(action: Action, state: LangPickerState?) -> LangPickerState {
-    var state = state ?? initState
+    let empty = LangPickerState(isHidden: true, selectedLangType: .source,
+                                selectedLang: Lang(id: Lang.Id(raw: 0), name: "", shortName: ""), allLangs: [])
+    var state = state ?? empty
 
     switch action {
     case let showLangPickerAction as ShowLangPickerAction:
