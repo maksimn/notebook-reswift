@@ -23,6 +23,11 @@
 		5945351E2756029700DD9DF2 /* LangPickerViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945351C2756029700DD9DF2 /* LangPickerViewParams.swift */; };
 		5945354B275653FE00DD9DF2 /* LangPickerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945354A275653FE00DD9DF2 /* LangPickerState.swift */; };
 		594535572756547B00DD9DF2 /* langPickerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594535562756547B00DD9DF2 /* langPickerReducer.swift */; };
+		594AE8432757B2CC005926E7 /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE8422757B2CC005926E7 /* AppConfigs.swift */; };
+		594AE8482757B2E5005926E7 /* ConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE8472757B2E5005926E7 /* ConfigBuilder.swift */; };
+		594AE8502757B2F3005926E7 /* ConfigBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE84F2757B2F3005926E7 /* ConfigBuilderImpl.swift */; };
+		594AE85F2757B3CC005926E7 /* UdfBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE85E2757B3CC005926E7 /* UdfBuilder.swift */; };
+		594AE8642757B3E8005926E7 /* UdfBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE8632757B3E8005926E7 /* UdfBuilderImpl.swift */; };
 		598E80452755649300CC61EA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E80442755649300CC61EA /* Store.swift */; };
 		598E804E27559A8B00CC61EA /* NewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E804D27559A8B00CC61EA /* NewWordViewController.swift */; };
 		598E805327559ABB00CC61EA /* NewWordViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E805227559ABB00CC61EA /* NewWordViewParams.swift */; };
@@ -98,6 +103,11 @@
 		5945351C2756029700DD9DF2 /* LangPickerViewParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerViewParams.swift; sourceTree = "<group>"; };
 		5945354A275653FE00DD9DF2 /* LangPickerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPickerState.swift; sourceTree = "<group>"; };
 		594535562756547B00DD9DF2 /* langPickerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = langPickerReducer.swift; sourceTree = "<group>"; };
+		594AE8422757B2CC005926E7 /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
+		594AE8472757B2E5005926E7 /* ConfigBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigBuilder.swift; sourceTree = "<group>"; };
+		594AE84F2757B2F3005926E7 /* ConfigBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigBuilderImpl.swift; sourceTree = "<group>"; };
+		594AE85E2757B3CC005926E7 /* UdfBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdfBuilder.swift; sourceTree = "<group>"; };
+		594AE8632757B3E8005926E7 /* UdfBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdfBuilderImpl.swift; sourceTree = "<group>"; };
 		598E80442755649300CC61EA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		598E804D27559A8B00CC61EA /* NewWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewController.swift; sourceTree = "<group>"; };
 		598E805227559ABB00CC61EA /* NewWordViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewParams.swift; sourceTree = "<group>"; };
@@ -240,6 +250,8 @@
 		594534EB2755F0FB00DD9DF2 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				594AE83F2757B28A005926E7 /* Config */,
+				594AE8542757B38F005926E7 /* UDF */,
 				59453519275601D400DD9DF2 /* LangPicker */,
 				598E804C27559A6C00CC61EA /* NewWord */,
 			);
@@ -293,6 +305,49 @@
 				594535562756547B00DD9DF2 /* langPickerReducer.swift */,
 			);
 			path = Reducer;
+			sourceTree = "<group>";
+		};
+		594AE83F2757B28A005926E7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				594AE8402757B2AD005926E7 /* Builder */,
+				594AE8412757B2B6005926E7 /* Domain */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		594AE8402757B2AD005926E7 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				594AE8472757B2E5005926E7 /* ConfigBuilder.swift */,
+				594AE84F2757B2F3005926E7 /* ConfigBuilderImpl.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		594AE8412757B2B6005926E7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				594AE8422757B2CC005926E7 /* AppConfigs.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		594AE8542757B38F005926E7 /* UDF */ = {
+			isa = PBXGroup;
+			children = (
+				594AE85D2757B3B9005926E7 /* Builder */,
+			);
+			path = UDF;
+			sourceTree = "<group>";
+		};
+		594AE85D2757B3B9005926E7 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				594AE85E2757B3CC005926E7 /* UdfBuilder.swift */,
+				594AE8632757B3E8005926E7 /* UdfBuilderImpl.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		598E804C27559A6C00CC61EA /* NewWord */ = {
@@ -694,9 +749,14 @@
 				5945351E2756029700DD9DF2 /* LangPickerViewParams.swift in Sources */,
 				59DECA8E27576E250000A9E9 /* NewWordView.swift in Sources */,
 				5945354B275653FE00DD9DF2 /* LangPickerState.swift in Sources */,
+				594AE8642757B3E8005926E7 /* UdfBuilderImpl.swift in Sources */,
 				5945351D2756029700DD9DF2 /* LangPickerViewImpl.swift in Sources */,
+				594AE8432757B2CC005926E7 /* AppConfigs.swift in Sources */,
 				598E80802755A69200CC61EA /* NewWordState.swift in Sources */,
+				594AE8502757B2F3005926E7 /* ConfigBuilderImpl.swift in Sources */,
 				59DECA592756F0EE0000A9E9 /* LangPickerGraphImpl.swift in Sources */,
+				594AE8482757B2E5005926E7 /* ConfigBuilder.swift in Sources */,
+				594AE85F2757B3CC005926E7 /* UdfBuilder.swift in Sources */,
 				59071C552754FFBF0043D48C /* AppDelegate.swift in Sources */,
 				59DECA412756EFEC0000A9E9 /* LangPickerGraph.swift in Sources */,
 				59DECA7A27576CA00000A9E9 /* NewWordGraphImpl.swift in Sources */,
