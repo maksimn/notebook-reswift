@@ -5,8 +5,9 @@
 //  Created by Maxim Ivanov on 09.11.2021.
 //
 
-import ReSwift
 import UIKit
+
+typealias LangPickerViewParams = LangPickerPopupParams
 
 final class LangPickerViewImpl: UIView, LangPickerView {
 

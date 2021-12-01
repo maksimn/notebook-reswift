@@ -10,17 +10,15 @@ import ReSwift
 
 final class NewWordBuilderImpl: NewWordBuilder {
 
-    private lazy var newWordViewParams: NewWordViewParams = {
-        NewWordViewParams(
-            staticContent: NewWordViewStaticContent(
-                selectButtonTitle: NSLocalizedString("Select", comment: ""),
-                arrowText: NSLocalizedString("⇋", comment: ""),
-                okText: NSLocalizedString("OK", comment: ""),
-                textFieldPlaceholder: NSLocalizedString("Enter a new word", comment: "")
-            ),
-            styles: NewWordViewStyles(backgroundColor: UIColor(red: 0.97, green: 0.97, blue: 0.95, alpha: 1.0))
-        )
-    }()
+    private lazy var viewParams = NewWordViewParams(
+        staticContent: NewWordViewStaticContent(
+            selectButtonTitle: NSLocalizedString("Select", comment: ""),
+            arrowText: NSLocalizedString("⇋", comment: ""),
+            okText: NSLocalizedString("OK", comment: ""),
+            textFieldPlaceholder: NSLocalizedString("Enter a new word", comment: "")
+        ),
+        styles: NewWordViewStyles(backgroundColor: UIColor(red: 0.97, green: 0.97, blue: 0.95, alpha: 1.0))
+    )
 
     private let appConfigs: AppConfigs
     private let store: Store<AppState>
@@ -36,7 +34,7 @@ final class NewWordBuilderImpl: NewWordBuilder {
     func build() -> NewWordGraph {
         NewWordGraphImpl(langRepository: langRepository,
                          store: store,
-                         viewParams: newWordViewParams,
+                         viewParams: viewParams,
                          langPickerBuilder: langPickerBuilder)
     }
 }

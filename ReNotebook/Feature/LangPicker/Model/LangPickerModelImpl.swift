@@ -40,23 +40,20 @@ final class LangPickerModelImpl: LangPickerModel, StoreSubscriber {
     // MARK: - LangPickerModel
 
     func selectLang(_ lang: Lang) {
-        guard let state = state else { return }
-        store.dispatch(SelectLangAction(lang: lang, langType: state.selectedLangType))
+        guard let langType = state?.selectedLangType else { return }
+        store.dispatch(SelectLangAction(lang: lang, langType: langType))
+        saveSelectedLang(lang, langType)
     }
 
     func hideLangPicker() {
         store.dispatch(HideLangPickerAction())
-        saveSelectedLang()
     }
 
-    private func saveSelectedLang() {
-        guard let state = state,
-              let selectedLang = state.selectedLang else { return }
-
-        if state.selectedLangType == .source {
-            langRepository.sourceLang = selectedLang
+    private func saveSelectedLang(_ lang: Lang, _ langType: SelectedLangType) {
+        if langType == .source {
+            langRepository.sourceLang = lang
         } else {
-            langRepository.targetLang = selectedLang
+            langRepository.targetLang = lang
         }
     }
 }

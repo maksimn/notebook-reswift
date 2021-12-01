@@ -17,6 +17,7 @@ func langPickerReducer(action: Action, state: LangPickerState?) -> LangPickerSta
         state.selectedLang = showLangPickerAction.selectedLang
     case let selectLangAction as SelectLangAction:
         state.selectedLang = selectLangAction.lang
+        state.selectedLangType = selectLangAction.langType
     default:
         break
     }

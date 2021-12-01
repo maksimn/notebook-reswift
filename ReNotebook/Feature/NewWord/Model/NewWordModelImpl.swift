@@ -45,21 +45,16 @@ class NewWordModelImpl: NewWordModel, StoreSubscriber {
 
     func showLangPickerWith(selectedLangType: SelectedLangType) {
         guard let state = state else { return }
-        guard let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang else { return }
+        let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang
 
         store.dispatch(ShowLangPickerAction(selectedLangType: selectedLangType,
                                             selectedLang: selectedLang))
     }
 
     func sendNewWord() {
-        guard let state = state,
-              let sourceLang = state.sourceLang,
-              let targetLang = state.targetLang,
-              !state.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
-            return
-        }
+        guard let state = state else { return }
 
-        let word = WordItem(text: state.text, sourceLang: sourceLang, targetLang: targetLang)
+        let word = WordItem(text: state.text, sourceLang: state.sourceLang, targetLang: state.targetLang)
         store.dispatch(NewWordAction(word: word))
     }
 

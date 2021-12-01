@@ -7,7 +7,7 @@
 
 struct NewWordState {
     var text: String
-    var sourceLang: Lang?
-    var targetLang: Lang?
+    var sourceLang: Lang
+    var targetLang: Lang
     var isLangPickerHidden: Bool
 }

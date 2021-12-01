@@ -11,7 +11,7 @@ final class LangPickerController: NSObject, UIPickerViewDataSource, UIPickerView
 
     let langs: [Lang]
 
-    let onSelectLang: ((Lang) -> Void)?
+    private let onSelectLang: ((Lang) -> Void)?
 
     init(langs: [Lang], onSelectLang: ((Lang) -> Void)?) {
         self.langs = langs

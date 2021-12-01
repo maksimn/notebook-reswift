@@ -15,11 +15,15 @@ final class UdfBuilderImpl: UdfBuilder {
     init(appConfigs: AppConfigs) {
         self.appConfigs = appConfigs
 
-        let emptyNewWordState = NewWordState(text: "", sourceLang: nil, targetLang: nil, isLangPickerHidden: true)
+        let langData = appConfigs.langData
+        let initNewWordState = NewWordState(text: "",
+                                            sourceLang: langData.defaultSourceLang,
+                                            targetLang: langData.defaultTargetLang,
+                                            isLangPickerHidden: true)
 
         let emptyLangPickerState = LangPickerState(selectedLangType: .source, selectedLang: nil)
 
-        let initAppState = AppState(newWord: emptyNewWordState, langPicker: emptyLangPickerState)
+        let initAppState = AppState(newWord: initNewWordState, langPicker: emptyLangPickerState)
 
         let loggingMiddleware: Middleware<Any> = { _, getState in
             return { next in

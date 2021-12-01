@@ -17,9 +17,7 @@
 		594535122756006900DD9DF2 /* LangPickerPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945350E2756006900DD9DF2 /* LangPickerPopup.swift */; };
 		594535132756006900DD9DF2 /* LangPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945350F2756006900DD9DF2 /* LangPickerController.swift */; };
 		594535142756006900DD9DF2 /* LangPickerPopupParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594535102756006900DD9DF2 /* LangPickerPopupParams.swift */; };
-		594535152756006900DD9DF2 /* LangPickerPopup+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594535112756006900DD9DF2 /* LangPickerPopup+Layout.swift */; };
 		5945351D2756029700DD9DF2 /* LangPickerViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945351B2756029700DD9DF2 /* LangPickerViewImpl.swift */; };
-		5945351E2756029700DD9DF2 /* LangPickerViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945351C2756029700DD9DF2 /* LangPickerViewParams.swift */; };
 		5945354B275653FE00DD9DF2 /* LangPickerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945354A275653FE00DD9DF2 /* LangPickerState.swift */; };
 		594535572756547B00DD9DF2 /* langPickerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594535562756547B00DD9DF2 /* langPickerReducer.swift */; };
 		594AE8432757B2CC005926E7 /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE8422757B2CC005926E7 /* AppConfigs.swift */; };
@@ -96,9 +94,7 @@
 		5945350E2756006900DD9DF2 /* LangPickerPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerPopup.swift; sourceTree = "<group>"; };
 		5945350F2756006900DD9DF2 /* LangPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerController.swift; sourceTree = "<group>"; };
 		594535102756006900DD9DF2 /* LangPickerPopupParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerPopupParams.swift; sourceTree = "<group>"; };
-		594535112756006900DD9DF2 /* LangPickerPopup+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LangPickerPopup+Layout.swift"; sourceTree = "<group>"; };
 		5945351B2756029700DD9DF2 /* LangPickerViewImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerViewImpl.swift; sourceTree = "<group>"; };
-		5945351C2756029700DD9DF2 /* LangPickerViewParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerViewParams.swift; sourceTree = "<group>"; };
 		5945354A275653FE00DD9DF2 /* LangPickerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPickerState.swift; sourceTree = "<group>"; };
 		594535562756547B00DD9DF2 /* langPickerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = langPickerReducer.swift; sourceTree = "<group>"; };
 		594AE8422757B2CC005926E7 /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
@@ -257,7 +253,6 @@
 			children = (
 				5945350F2756006900DD9DF2 /* LangPickerController.swift */,
 				5945350E2756006900DD9DF2 /* LangPickerPopup.swift */,
-				594535112756006900DD9DF2 /* LangPickerPopup+Layout.swift */,
 				594535102756006900DD9DF2 /* LangPickerPopupParams.swift */,
 			);
 			path = LangPickerPopup;
@@ -280,7 +275,6 @@
 			children = (
 				59DECA4B2756F0730000A9E9 /* LangPickerView.swift */,
 				5945351B2756029700DD9DF2 /* LangPickerViewImpl.swift */,
-				5945351C2756029700DD9DF2 /* LangPickerViewParams.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -743,7 +737,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5945351E2756029700DD9DF2 /* LangPickerViewParams.swift in Sources */,
 				59DECA8E27576E250000A9E9 /* NewWordView.swift in Sources */,
 				5945354B275653FE00DD9DF2 /* LangPickerState.swift in Sources */,
 				594AE8642757B3E8005926E7 /* UdfBuilderImpl.swift in Sources */,
@@ -783,7 +776,6 @@
 				594535572756547B00DD9DF2 /* langPickerReducer.swift in Sources */,
 				594AE8722757B6AA005926E7 /* appReducer.swift in Sources */,
 				59DECA9A275770030000A9E9 /* LangRepositoryImpl.swift in Sources */,
-				594535152756006900DD9DF2 /* LangPickerPopup+Layout.swift in Sources */,
 				594535122756006900DD9DF2 /* LangPickerPopup.swift in Sources */,
 				59DECA4C2756F0730000A9E9 /* LangPickerView.swift in Sources */,
 				59DECA9527576FF70000A9E9 /* LangRepository.swift in Sources */,
