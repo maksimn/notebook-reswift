@@ -19,6 +19,7 @@ extension NewWordViewController {
         initArrowLabel()
         initTextField()
         initOkButton()
+        initLangPicker()
     }
 
     private func addSubviews() {
@@ -112,5 +113,16 @@ extension NewWordViewController {
             make.centerX.equalTo(contentView)
             make.height.equalTo(30)
         }
+    }
+
+    private func initLangPicker() {
+        let langPickerGraph = langPickerBuilder.build()
+
+        langPickerView = langPickerGraph.uiview
+        view.addSubview(langPickerView ?? UIView())
+        langPickerView?.snp.makeConstraints { make -> Void in
+            make.edges.equalTo(contentView)
+        }
+        langPickerView?.isHidden = true
     }
 }

@@ -5,10 +5,12 @@
 //  Created by Maxim Ivanov on 30.11.2021.
 //
 
-import ReSwift
 import UIKit
 
-class NewWordViewController: UIViewController, StoreSubscriber, UITextFieldDelegate {
+class NewWordViewController: UIViewController, NewWordView, UITextFieldDelegate {
+
+    private let modelBlock: () -> NewWordModel?
+    private lazy var model: NewWordModel? = modelBlock()
 
     let params: NewWordViewParams
 
@@ -20,19 +22,14 @@ class NewWordViewController: UIViewController, StoreSubscriber, UITextFieldDeleg
     let textField = UITextField()
 
     var langPickerView: UIView?
+    let langPickerBuilder: LangPickerBuilder
 
-    private var state: NewWordState? {
-        didSet {
-            guard let state = state else { return }
-            textField.text = state.text
-            sourceLangLabel.text = state.sourceLang.name
-            targetLangLabel.text = state.targetLang.name
-            langPickerView?.isHidden = state.isLangPickerHidden
-        }
-    }
-
-    init(params: NewWordViewParams) {
-        self.params = params
+    init(modelBlock: @escaping () -> NewWordModel?,
+         viewParams: NewWordViewParams,
+         langPickerBuilder: LangPickerBuilder) {
+        self.modelBlock = modelBlock
+        self.params = viewParams
+        self.langPickerBuilder = langPickerBuilder
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -43,32 +40,20 @@ class NewWordViewController: UIViewController, StoreSubscriber, UITextFieldDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
-
-        let langPickerBuilder = LangPickerBuilderImpl(store: store)
-        let langPickerGraph = langPickerBuilder.build()
-
-        langPickerView = langPickerGraph.uiview
-        view.addSubview(langPickerView ?? UIView())
-        langPickerView?.snp.makeConstraints { make -> Void in
-            make.edges.equalTo(contentView)
-        }
-
-        store.subscribe(self) { subcription in
-            subcription.select { state in state.newWord }
-        }
     }
 
-    // MARK: - StoreSubscriber
-
-    func newState(state: NewWordState) {
-        self.state = state
+    func set(_ state: NewWordState) {
+        textField.text = state.text
+        sourceLangLabel.text = state.sourceLang.name
+        targetLangLabel.text = state.targetLang.name
+        langPickerView?.isHidden = state.isLangPickerHidden
     }
 
     // MARK: - UITextFieldDelegate
 
     @objc
     func textFieldDidChange(_ textField: UITextField) {
-        store.dispatch(NewWordTextChangedAction(text: textField.text ?? ""))
+        model?.updateNewWordText(text: textField.text ?? "")
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -96,17 +81,10 @@ class NewWordViewController: UIViewController, StoreSubscriber, UITextFieldDeleg
     // MARK: - Private
 
     private func showLangPickerView(selectedLangType: SelectedLangType) {
-        guard let state = state else { return }
-        let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang
-
-        store.dispatch(ShowLangPickerAction(selectedLangType: selectedLangType,
-                                            selectedLang: selectedLang))
+        model?.showLangPickerWith(selectedLangType: selectedLangType)
     }
 
     private func sendNewWord() {
-        guard let state = state else { return }
-        if state.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { return }
-        let word = WordItem(text: state.text, sourceLang: state.sourceLang, targetLang: state.targetLang)
-        store.dispatch(NewWordAction(word: word))
+        model?.sendNewWord()
     }
 }

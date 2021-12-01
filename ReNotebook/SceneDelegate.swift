@@ -16,16 +16,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let viewParams = NewWordViewParams(
-            staticContent: NewWordViewStaticContent(
-                selectButtonTitle: NSLocalizedString("Select", comment: ""),
-                arrowText: NSLocalizedString("⇋", comment: ""),
-                okText: NSLocalizedString("OK", comment: ""),
-                textFieldPlaceholder: NSLocalizedString("Enter a new word", comment: "")
-            ),
-            styles: NewWordViewStyles(backgroundColor: UIColor(red: 0.97, green: 0.97, blue: 0.95, alpha: 1.0))
-        )
-        let newWordViewController = NewWordViewController(params: viewParams)
+        let lang1 = Lang(id: Lang.Id(raw: 1), name: NSLocalizedString("English", comment: ""), shortName: "EN")
+        let lang2 = Lang(id: Lang.Id(raw: 2), name: NSLocalizedString("Russian", comment: ""), shortName: "RU")
+        let lang4 = Lang(id: Lang.Id(raw: 4), name: NSLocalizedString("Italian", comment: ""), shortName: "IT")
+        let lang5 = Lang(id: Lang.Id(raw: 5), name: NSLocalizedString("German", comment: ""), shortName: "DE")
+
+        let langData = LangData(allLangs: [lang1, lang2, lang4, lang5],
+                                sourceLangKey: "io.github.maksimn.pd.sourceLang",
+                                targetLangKey: "io.github.maksimn.pd.targetLang",
+                                defaultSourceLang: lang1,
+                                defaultTargetLang: lang2)
+        let newWordBuilder = NewWordBuilderImpl(langRepository: LangRepositoryImpl(userDefaults: UserDefaults.standard,
+                                                                                   data: langData),
+                                                store: store)
+        let newWordGraph = newWordBuilder.build()
+        let newWordViewController = newWordGraph.viewController
 
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = newWordViewController

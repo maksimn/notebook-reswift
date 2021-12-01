@@ -42,6 +42,16 @@
 		59DECA542756F0DD0000A9E9 /* LangPickerBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA532756F0DD0000A9E9 /* LangPickerBuilderImpl.swift */; };
 		59DECA592756F0EE0000A9E9 /* LangPickerGraphImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA582756F0EE0000A9E9 /* LangPickerGraphImpl.swift */; };
 		59DECA5E2756F0FD0000A9E9 /* LangPickerModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA5D2756F0FD0000A9E9 /* LangPickerModelImpl.swift */; };
+		59DECA6727576C5C0000A9E9 /* NewWordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA6627576C5C0000A9E9 /* NewWordModel.swift */; };
+		59DECA6F27576C760000A9E9 /* NewWordModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA6E27576C760000A9E9 /* NewWordModelImpl.swift */; };
+		59DECA7527576C940000A9E9 /* NewWordGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA7427576C940000A9E9 /* NewWordGraph.swift */; };
+		59DECA7A27576CA00000A9E9 /* NewWordGraphImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA7927576CA00000A9E9 /* NewWordGraphImpl.swift */; };
+		59DECA8027576CB50000A9E9 /* NewWordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA7F27576CB50000A9E9 /* NewWordBuilder.swift */; };
+		59DECA8627576CCD0000A9E9 /* NewWordBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA8527576CCD0000A9E9 /* NewWordBuilderImpl.swift */; };
+		59DECA8E27576E250000A9E9 /* NewWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA8D27576E250000A9E9 /* NewWordView.swift */; };
+		59DECA9527576FF70000A9E9 /* LangRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA9427576FF70000A9E9 /* LangRepository.swift */; };
+		59DECA9A275770030000A9E9 /* LangRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA99275770030000A9E9 /* LangRepositoryImpl.swift */; };
+		59DECA9F2757702F0000A9E9 /* LangData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA9E2757702F0000A9E9 /* LangData.swift */; };
 		618110D1EBA3675222BCB803 /* Pods_ReNotebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4B73776E77AA9DD470DEC2 /* Pods_ReNotebook.framework */; };
 		F41DF014CC0769184B476B4E /* Pods_ReNotebookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8941D0A1E85CF990DCDC1D /* Pods_ReNotebookTests.framework */; };
 /* End PBXBuildFile section */
@@ -107,6 +117,16 @@
 		59DECA532756F0DD0000A9E9 /* LangPickerBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPickerBuilderImpl.swift; sourceTree = "<group>"; };
 		59DECA582756F0EE0000A9E9 /* LangPickerGraphImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPickerGraphImpl.swift; sourceTree = "<group>"; };
 		59DECA5D2756F0FD0000A9E9 /* LangPickerModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPickerModelImpl.swift; sourceTree = "<group>"; };
+		59DECA6627576C5C0000A9E9 /* NewWordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordModel.swift; sourceTree = "<group>"; };
+		59DECA6E27576C760000A9E9 /* NewWordModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordModelImpl.swift; sourceTree = "<group>"; };
+		59DECA7427576C940000A9E9 /* NewWordGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordGraph.swift; sourceTree = "<group>"; };
+		59DECA7927576CA00000A9E9 /* NewWordGraphImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordGraphImpl.swift; sourceTree = "<group>"; };
+		59DECA7F27576CB50000A9E9 /* NewWordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordBuilder.swift; sourceTree = "<group>"; };
+		59DECA8527576CCD0000A9E9 /* NewWordBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordBuilderImpl.swift; sourceTree = "<group>"; };
+		59DECA8D27576E250000A9E9 /* NewWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordView.swift; sourceTree = "<group>"; };
+		59DECA9427576FF70000A9E9 /* LangRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangRepository.swift; sourceTree = "<group>"; };
+		59DECA99275770030000A9E9 /* LangRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangRepositoryImpl.swift; sourceTree = "<group>"; };
+		59DECA9E2757702F0000A9E9 /* LangData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangData.swift; sourceTree = "<group>"; };
 		61313236377EB5E75EE505A9 /* Pods-ReNotebookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.release.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.release.xcconfig"; sourceTree = "<group>"; };
 		69B88A351E0C675E71F64646 /* Pods-ReNotebookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReNotebookTests.debug.xcconfig"; path = "Target Support Files/Pods-ReNotebookTests/Pods-ReNotebookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71471C1C0692B74EE9009C51 /* Pods_ReNotebook_ReNotebookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReNotebook_ReNotebookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +204,7 @@
 				598E806327559B3900CC61EA /* Core */,
 				598E805D27559B1700CC61EA /* DataClass */,
 				598E805727559AD000CC61EA /* DesignSystem */,
+				59DECA9227576FDD0000A9E9 /* Repository */,
 				594534EB2755F0FB00DD9DF2 /* Feature */,
 				594534F22755F1C200DD9DF2 /* Middleware */,
 				59DECA232756C24D0000A9E9 /* Action.swift */,
@@ -277,8 +298,10 @@
 		598E804C27559A6C00CC61EA /* NewWord */ = {
 			isa = PBXGroup;
 			children = (
+				59DECA7E27576CA50000A9E9 /* Builder */,
+				59DECA7327576C860000A9E9 /* Graph */,
+				59DECA6527576C400000A9E9 /* Model */,
 				598E80842755A6AF00CC61EA /* Reducer */,
-				598E807E2755A68100CC61EA /* State */,
 				598E80772755A61B00CC61EA /* View */,
 			);
 			path = NewWord;
@@ -297,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				598E805E27559B2200CC61EA /* Lang.swift */,
+				59DECA9E2757702F0000A9E9 /* LangData.swift */,
 				59DECA312756C5720000A9E9 /* WordItem.swift */,
 			);
 			path = DataClass;
@@ -313,19 +337,12 @@
 		598E80772755A61B00CC61EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				59DECA8D27576E250000A9E9 /* NewWordView.swift */,
 				598E804D27559A8B00CC61EA /* NewWordViewController.swift */,
 				598E806C27559BB300CC61EA /* NewWordViewController+Layout.swift */,
 				598E805227559ABB00CC61EA /* NewWordViewParams.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		598E807E2755A68100CC61EA /* State */ = {
-			isa = PBXGroup;
-			children = (
-				598E807F2755A69200CC61EA /* NewWordState.swift */,
-			);
-			path = State;
 			sourceTree = "<group>";
 		};
 		598E80842755A6AF00CC61EA /* Reducer */ = {
@@ -362,6 +379,51 @@
 				5945354A275653FE00DD9DF2 /* LangPickerState.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		59DECA6527576C400000A9E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59DECA6627576C5C0000A9E9 /* NewWordModel.swift */,
+				59DECA6E27576C760000A9E9 /* NewWordModelImpl.swift */,
+				598E807F2755A69200CC61EA /* NewWordState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59DECA7327576C860000A9E9 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				59DECA7427576C940000A9E9 /* NewWordGraph.swift */,
+				59DECA7927576CA00000A9E9 /* NewWordGraphImpl.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		59DECA7E27576CA50000A9E9 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				59DECA7F27576CB50000A9E9 /* NewWordBuilder.swift */,
+				59DECA8527576CCD0000A9E9 /* NewWordBuilderImpl.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		59DECA9227576FDD0000A9E9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				59DECA9327576FE40000A9E9 /* Lang */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		59DECA9327576FE40000A9E9 /* Lang */ = {
+			isa = PBXGroup;
+			children = (
+				59DECA9427576FF70000A9E9 /* LangRepository.swift */,
+				59DECA99275770030000A9E9 /* LangRepositoryImpl.swift */,
+			);
+			path = Lang;
 			sourceTree = "<group>";
 		};
 		D30E92E6772F4757739EB473 /* Frameworks */ = {
@@ -630,12 +692,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5945351E2756029700DD9DF2 /* LangPickerViewParams.swift in Sources */,
+				59DECA8E27576E250000A9E9 /* NewWordView.swift in Sources */,
 				5945354B275653FE00DD9DF2 /* LangPickerState.swift in Sources */,
 				5945351D2756029700DD9DF2 /* LangPickerViewImpl.swift in Sources */,
 				598E80802755A69200CC61EA /* NewWordState.swift in Sources */,
 				59DECA592756F0EE0000A9E9 /* LangPickerGraphImpl.swift in Sources */,
 				59071C552754FFBF0043D48C /* AppDelegate.swift in Sources */,
 				59DECA412756EFEC0000A9E9 /* LangPickerGraph.swift in Sources */,
+				59DECA7A27576CA00000A9E9 /* NewWordGraphImpl.swift in Sources */,
 				59DECA322756C5720000A9E9 /* WordItem.swift in Sources */,
 				598E804E27559A8B00CC61EA /* NewWordViewController.swift in Sources */,
 				59071C572754FFBF0043D48C /* SceneDelegate.swift in Sources */,
@@ -644,21 +708,29 @@
 				598E80452755649300CC61EA /* Store.swift in Sources */,
 				59DECA3B2756EFB20000A9E9 /* LangPickerBuilder.swift in Sources */,
 				594534F42755F23E00DD9DF2 /* loggingMiddleware.swift in Sources */,
+				59DECA6727576C5C0000A9E9 /* NewWordModel.swift in Sources */,
 				598E806D27559BB300CC61EA /* NewWordViewController+Layout.swift in Sources */,
 				598E806527559B4900CC61EA /* Tagged.swift in Sources */,
 				59DECA542756F0DD0000A9E9 /* LangPickerBuilderImpl.swift in Sources */,
+				59DECA9F2757702F0000A9E9 /* LangData.swift in Sources */,
 				594535142756006900DD9DF2 /* LangPickerPopupParams.swift in Sources */,
 				59DECA242756C24D0000A9E9 /* Action.swift in Sources */,
+				59DECA8027576CB50000A9E9 /* NewWordBuilder.swift in Sources */,
 				594535132756006900DD9DF2 /* LangPickerController.swift in Sources */,
 				598E805927559ADE00CC61EA /* ViewParams.swift in Sources */,
 				598E805327559ABB00CC61EA /* NewWordViewParams.swift in Sources */,
+				59DECA7527576C940000A9E9 /* NewWordGraph.swift in Sources */,
 				598E805F27559B2200CC61EA /* Lang.swift in Sources */,
 				598E80862755A6C600CC61EA /* newWordReducer.swift in Sources */,
+				59DECA6F27576C760000A9E9 /* NewWordModelImpl.swift in Sources */,
+				59DECA8627576CCD0000A9E9 /* NewWordBuilderImpl.swift in Sources */,
 				594535572756547B00DD9DF2 /* langPickerReducer.swift in Sources */,
+				59DECA9A275770030000A9E9 /* LangRepositoryImpl.swift in Sources */,
 				594535152756006900DD9DF2 /* LangPickerPopup+Layout.swift in Sources */,
 				59DECA1C2756BDE10000A9E9 /* initAppState.swift in Sources */,
 				594535122756006900DD9DF2 /* LangPickerPopup.swift in Sources */,
 				59DECA4C2756F0730000A9E9 /* LangPickerView.swift in Sources */,
+				59DECA9527576FF70000A9E9 /* LangRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
