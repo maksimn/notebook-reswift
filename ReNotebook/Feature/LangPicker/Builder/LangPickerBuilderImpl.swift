@@ -22,12 +22,15 @@ final class LangPickerBuilderImpl: LangPickerBuilder {
     }()
 
     private let store: Store<AppState>
+    private let langRepository: LangRepository
 
-    init(store: Store<AppState>) {
+    init(store: Store<AppState>,
+         langRepository: LangRepository) {
         self.store = store
+        self.langRepository = langRepository
     }
 
     func build() -> LangPickerGraph {
-        LangPickerGraphImpl(viewParams: viewParams, store: store)
+        LangPickerGraphImpl(viewParams: viewParams, store: store, langRepository: langRepository)
     }
 }

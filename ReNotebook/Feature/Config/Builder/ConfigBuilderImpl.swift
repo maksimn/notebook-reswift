@@ -23,7 +23,7 @@ final class ConfigBuilderImpl: ConfigBuilder {
 
         return AppConfigs(
 
-            isLoggingEnabled: true,
+            logging: LoggingConfigs(isLoggingEnabled: true, allowLongDebugMessages: false),
 
             langData: langData,
 

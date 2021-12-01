@@ -20,9 +20,12 @@ final class LangPickerModelImpl: LangPickerModel, StoreSubscriber {
         }
     }
 
-    init(view: LangPickerView, store: Store<AppState>) {
+    private var langRepository: LangRepository
+
+    init(view: LangPickerView, store: Store<AppState>, langRepository: LangRepository) {
         self.view = view
         self.store = store
+        self.langRepository = langRepository
         store.subscribe(self) { subcription in
             subcription.select { state in state.langPicker }
         }
@@ -43,5 +46,17 @@ final class LangPickerModelImpl: LangPickerModel, StoreSubscriber {
 
     func hideLangPicker() {
         store.dispatch(HideLangPickerAction())
+        saveSelectedLang()
+    }
+
+    private func saveSelectedLang() {
+        guard let state = state,
+              let selectedLang = state.selectedLang else { return }
+
+        if state.selectedLangType == .source {
+            langRepository.sourceLang = selectedLang
+        } else {
+            langRepository.targetLang = selectedLang
+        }
     }
 }

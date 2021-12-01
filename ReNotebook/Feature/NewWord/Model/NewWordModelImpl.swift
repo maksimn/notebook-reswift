@@ -28,15 +28,13 @@ class NewWordModelImpl: NewWordModel, StoreSubscriber {
         store.subscribe(self) { subcription in
             subcription.select { state in state.newWord }
         }
-        loadSourceLang()
-        loadTargetLang()
+        loadLangData()
     }
 
     // MARK: - StoreSubscriber
 
     func newState(state: NewWordState) {
         self.state = state
-        updateStorageIfNeeded(state)
     }
 
     // MARK: - NewWordModel
@@ -47,43 +45,28 @@ class NewWordModelImpl: NewWordModel, StoreSubscriber {
 
     func showLangPickerWith(selectedLangType: SelectedLangType) {
         guard let state = state else { return }
-        let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang
+        guard let selectedLang = selectedLangType == .source ? state.sourceLang : state.targetLang else { return }
 
         store.dispatch(ShowLangPickerAction(selectedLangType: selectedLangType,
                                             selectedLang: selectedLang))
     }
 
     func sendNewWord() {
-        guard let state = state else { return }
-        if state.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        guard let state = state,
+              let sourceLang = state.sourceLang,
+              let targetLang = state.targetLang,
+              !state.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             return
         }
 
-        let word = WordItem(text: state.text, sourceLang: state.sourceLang, targetLang: state.targetLang)
+        let word = WordItem(text: state.text, sourceLang: sourceLang, targetLang: targetLang)
         store.dispatch(NewWordAction(word: word))
     }
 
     // MARK: - Private
 
-    private func loadSourceLang() {
-        let sourceLang = langRepository.sourceLang
-
-        store.dispatch(LoadSourceLangAction(lang: sourceLang))
-    }
-
-    private func loadTargetLang() {
-        let targetLang = langRepository.targetLang
-
-        store.dispatch(LoadTargetLangAction(lang: targetLang))
-    }
-
-    private func updateStorageIfNeeded(_ state: NewWordState) {
-        if state.sourceLang != langRepository.sourceLang {
-            langRepository.sourceLang = state.sourceLang
-        }
-
-        if state.targetLang != langRepository.targetLang {
-            langRepository.targetLang = state.targetLang
-        }
+    private func loadLangData() {
+        store.dispatch(LoadLangDataAction(sourceLang: langRepository.sourceLang,
+                                          targetLang: langRepository.targetLang))
     }
 }

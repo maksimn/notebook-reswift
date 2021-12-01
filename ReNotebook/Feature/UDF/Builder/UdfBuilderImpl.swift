@@ -10,37 +10,33 @@ import ReSwift
 final class UdfBuilderImpl: UdfBuilder {
 
     private let appConfigs: AppConfigs
-
     private let store: Store<AppState>
-
-    private let langRepository: LangRepository
 
     init(appConfigs: AppConfigs) {
         self.appConfigs = appConfigs
 
-        let langData = appConfigs.langData
-        langRepository = LangRepositoryImpl(userDefaults: UserDefaults.standard,
-                                            data: langData)
-        let initNewWordState = NewWordState(text: "",
-                                            sourceLang: langRepository.sourceLang,
-                                            targetLang: langRepository.targetLang,
-                                            isLangPickerHidden: true)
+        let emptyNewWordState = NewWordState(text: "", sourceLang: nil, targetLang: nil, isLangPickerHidden: true)
 
-        let initLangPickerState = LangPickerState(
-            isHidden: true,
-            selectedLangType: .source,
-            selectedLang: Lang(id: Lang.Id(raw: 1),
-                               name: NSLocalizedString("English", comment: ""),
-                               shortName: "EN"),
-            allLangs: langData.allLangs
-        )
+        let emptyLangPickerState = LangPickerState(selectedLangType: .source, selectedLang: nil)
 
-        let initAppState = AppState(newWord: initNewWordState, langPicker: initLangPickerState)
+        let initAppState = AppState(newWord: emptyNewWordState, langPicker: emptyLangPickerState)
 
-        let loggingMiddleware: Middleware<Any> = { _, _ in
+        let loggingMiddleware: Middleware<Any> = { _, getState in
             return { next in
                 return { action in
-                    print(action)
+                    let logging = appConfigs.logging
+
+                    if logging.isLoggingEnabled && logging.allowLongDebugMessages,
+                        let state = getState() {
+                        print("PREVIOUS_STATE:")
+                        print(state)
+                    }
+
+                    if logging.isLoggingEnabled {
+                        print("ACTION:")
+                        print(action)
+                        print("======================================")
+                    }
 
                     return next(action)
                 }
@@ -55,7 +51,7 @@ final class UdfBuilderImpl: UdfBuilder {
     }
 
     func createNewWordBuilder() -> NewWordBuilder {
-        NewWordBuilderImpl(langRepository: langRepository,
+        NewWordBuilderImpl(appConfigs: appConfigs,
                            store: store)
     }
 }

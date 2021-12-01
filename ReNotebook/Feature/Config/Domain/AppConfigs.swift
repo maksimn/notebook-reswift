@@ -9,13 +9,18 @@ import UIKit
 
 struct AppConfigs {
 
-    let isLoggingEnabled: Bool
+    let logging: LoggingConfigs
 
     let langData: LangData
 
     let ponsApiSecret: String
 
     let appViewConfigs: AppViewConfigs
+}
+
+struct LoggingConfigs {
+    let isLoggingEnabled: Bool
+    let allowLongDebugMessages: Bool
 }
 
 struct AppViewConfigs {

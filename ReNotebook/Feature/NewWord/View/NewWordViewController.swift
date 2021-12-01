@@ -44,8 +44,8 @@ class NewWordViewController: UIViewController, NewWordView, UITextFieldDelegate 
 
     func set(_ state: NewWordState) {
         textField.text = state.text
-        sourceLangLabel.text = state.sourceLang.name
-        targetLangLabel.text = state.targetLang.name
+        sourceLangLabel.text = state.sourceLang?.name
+        targetLangLabel.text = state.targetLang?.name
         langPickerView?.isHidden = state.isLangPickerHidden
     }
 

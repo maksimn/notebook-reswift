@@ -22,13 +22,14 @@ final class NewWordBuilderImpl: NewWordBuilder {
         )
     }()
 
-    private let langRepository: LangRepository
+    private let appConfigs: AppConfigs
     private let store: Store<AppState>
-    private lazy var langPickerBuilder = LangPickerBuilderImpl(store: store)
+    private lazy var langRepository = LangRepositoryImpl(userDefaults: UserDefaults.standard, data: appConfigs.langData)
+    private lazy var langPickerBuilder = LangPickerBuilderImpl(store: store, langRepository: langRepository)
 
-    init(langRepository: LangRepository,
+    init(appConfigs: AppConfigs,
          store: Store<AppState>) {
-        self.langRepository = langRepository
+        self.appConfigs = appConfigs
         self.store = store
     }
 

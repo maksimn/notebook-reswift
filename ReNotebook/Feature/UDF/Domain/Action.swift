@@ -27,10 +27,7 @@ struct NewWordAction: Action {
     let word: WordItem
 }
 
-struct LoadSourceLangAction: Action {
-    let lang: Lang
-}
-
-struct LoadTargetLangAction: Action {
-    let lang: Lang
+struct LoadLangDataAction: Action {
+    let sourceLang: Lang
+    let targetLang: Lang
 }

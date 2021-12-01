@@ -6,8 +6,6 @@
 //
 
 struct LangPickerState {
-    var isHidden: Bool
     var selectedLangType: SelectedLangType
-    var selectedLang: Lang
-    let allLangs: [Lang]
+    var selectedLang: Lang?
 }

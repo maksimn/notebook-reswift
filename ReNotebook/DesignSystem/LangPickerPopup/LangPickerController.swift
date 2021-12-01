@@ -31,6 +31,7 @@ final class LangPickerController: NSObject, UIPickerViewDataSource, UIPickerView
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard row >= 0 && row < langs.count else { return }
         onSelectLang?(langs[row])
     }
 }
