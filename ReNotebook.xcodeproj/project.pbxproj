@@ -14,7 +14,6 @@
 		59071C612754FFC30043D48C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */; };
 		59071C6C2754FFC30043D48C /* ReNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C6B2754FFC30043D48C /* ReNotebookTests.swift */; };
 		59071C772754FFC30043D48C /* ReNotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59071C762754FFC30043D48C /* ReNotebookUITests.swift */; };
-		594534F42755F23E00DD9DF2 /* loggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594534F32755F23E00DD9DF2 /* loggingMiddleware.swift */; };
 		594535122756006900DD9DF2 /* LangPickerPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945350E2756006900DD9DF2 /* LangPickerPopup.swift */; };
 		594535132756006900DD9DF2 /* LangPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945350F2756006900DD9DF2 /* LangPickerController.swift */; };
 		594535142756006900DD9DF2 /* LangPickerPopupParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594535102756006900DD9DF2 /* LangPickerPopupParams.swift */; };
@@ -28,7 +27,8 @@
 		594AE8502757B2F3005926E7 /* ConfigBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE84F2757B2F3005926E7 /* ConfigBuilderImpl.swift */; };
 		594AE85F2757B3CC005926E7 /* UdfBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE85E2757B3CC005926E7 /* UdfBuilder.swift */; };
 		594AE8642757B3E8005926E7 /* UdfBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE8632757B3E8005926E7 /* UdfBuilderImpl.swift */; };
-		598E80452755649300CC61EA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E80442755649300CC61EA /* Store.swift */; };
+		594AE86A2757B69B005926E7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE8692757B69B005926E7 /* AppState.swift */; };
+		594AE8722757B6AA005926E7 /* appReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AE8712757B6AA005926E7 /* appReducer.swift */; };
 		598E804E27559A8B00CC61EA /* NewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E804D27559A8B00CC61EA /* NewWordViewController.swift */; };
 		598E805327559ABB00CC61EA /* NewWordViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E805227559ABB00CC61EA /* NewWordViewParams.swift */; };
 		598E805927559ADE00CC61EA /* ViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E805827559ADE00CC61EA /* ViewParams.swift */; };
@@ -37,7 +37,6 @@
 		598E806D27559BB300CC61EA /* NewWordViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E806C27559BB300CC61EA /* NewWordViewController+Layout.swift */; };
 		598E80802755A69200CC61EA /* NewWordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E807F2755A69200CC61EA /* NewWordState.swift */; };
 		598E80862755A6C600CC61EA /* newWordReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E80852755A6C600CC61EA /* newWordReducer.swift */; };
-		59DECA1C2756BDE10000A9E9 /* initAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA1B2756BDE10000A9E9 /* initAppState.swift */; };
 		59DECA242756C24D0000A9E9 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA232756C24D0000A9E9 /* Action.swift */; };
 		59DECA322756C5720000A9E9 /* WordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA312756C5720000A9E9 /* WordItem.swift */; };
 		59DECA3B2756EFB20000A9E9 /* LangPickerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DECA3A2756EFB20000A9E9 /* LangPickerBuilder.swift */; };
@@ -94,7 +93,6 @@
 		59071C722754FFC30043D48C /* ReNotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReNotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59071C762754FFC30043D48C /* ReNotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNotebookUITests.swift; sourceTree = "<group>"; };
 		59071C782754FFC30043D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		594534F32755F23E00DD9DF2 /* loggingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggingMiddleware.swift; sourceTree = "<group>"; };
 		5945350E2756006900DD9DF2 /* LangPickerPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerPopup.swift; sourceTree = "<group>"; };
 		5945350F2756006900DD9DF2 /* LangPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerController.swift; sourceTree = "<group>"; };
 		594535102756006900DD9DF2 /* LangPickerPopupParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangPickerPopupParams.swift; sourceTree = "<group>"; };
@@ -108,7 +106,8 @@
 		594AE84F2757B2F3005926E7 /* ConfigBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigBuilderImpl.swift; sourceTree = "<group>"; };
 		594AE85E2757B3CC005926E7 /* UdfBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdfBuilder.swift; sourceTree = "<group>"; };
 		594AE8632757B3E8005926E7 /* UdfBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdfBuilderImpl.swift; sourceTree = "<group>"; };
-		598E80442755649300CC61EA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		594AE8692757B69B005926E7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		594AE8712757B6AA005926E7 /* appReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appReducer.swift; sourceTree = "<group>"; };
 		598E804D27559A8B00CC61EA /* NewWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewController.swift; sourceTree = "<group>"; };
 		598E805227559ABB00CC61EA /* NewWordViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewParams.swift; sourceTree = "<group>"; };
 		598E805827559ADE00CC61EA /* ViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewParams.swift; sourceTree = "<group>"; };
@@ -117,7 +116,6 @@
 		598E806C27559BB300CC61EA /* NewWordViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewWordViewController+Layout.swift"; sourceTree = "<group>"; };
 		598E807F2755A69200CC61EA /* NewWordState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordState.swift; sourceTree = "<group>"; };
 		598E80852755A6C600CC61EA /* newWordReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newWordReducer.swift; sourceTree = "<group>"; };
-		59DECA1B2756BDE10000A9E9 /* initAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initAppState.swift; sourceTree = "<group>"; };
 		59DECA232756C24D0000A9E9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		59DECA312756C5720000A9E9 /* WordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordItem.swift; sourceTree = "<group>"; };
 		59DECA3A2756EFB20000A9E9 /* LangPickerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPickerBuilder.swift; sourceTree = "<group>"; };
@@ -216,12 +214,8 @@
 				598E805727559AD000CC61EA /* DesignSystem */,
 				59DECA9227576FDD0000A9E9 /* Repository */,
 				594534EB2755F0FB00DD9DF2 /* Feature */,
-				594534F22755F1C200DD9DF2 /* Middleware */,
-				59DECA232756C24D0000A9E9 /* Action.swift */,
 				59071C542754FFBF0043D48C /* AppDelegate.swift */,
 				59071C562754FFBF0043D48C /* SceneDelegate.swift */,
-				598E80442755649300CC61EA /* Store.swift */,
-				59DECA1B2756BDE10000A9E9 /* initAppState.swift */,
 				59071C5D2754FFC30043D48C /* Assets.xcassets */,
 				59071C5F2754FFC30043D48C /* LaunchScreen.storyboard */,
 				59071C622754FFC30043D48C /* Info.plist */,
@@ -256,14 +250,6 @@
 				598E804C27559A6C00CC61EA /* NewWord */,
 			);
 			path = Feature;
-			sourceTree = "<group>";
-		};
-		594534F22755F1C200DD9DF2 /* Middleware */ = {
-			isa = PBXGroup;
-			children = (
-				594534F32755F23E00DD9DF2 /* loggingMiddleware.swift */,
-			);
-			path = Middleware;
 			sourceTree = "<group>";
 		};
 		5945350D2756002600DD9DF2 /* LangPickerPopup */ = {
@@ -337,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				594AE85D2757B3B9005926E7 /* Builder */,
+				594AE8682757B682005926E7 /* Domain */,
 			);
 			path = UDF;
 			sourceTree = "<group>";
@@ -348,6 +335,16 @@
 				594AE8632757B3E8005926E7 /* UdfBuilderImpl.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		594AE8682757B682005926E7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				59DECA232756C24D0000A9E9 /* Action.swift */,
+				594AE8692757B69B005926E7 /* AppState.swift */,
+				594AE8712757B6AA005926E7 /* appReducer.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		598E804C27559A6C00CC61EA /* NewWord */ = {
@@ -763,11 +760,10 @@
 				59DECA322756C5720000A9E9 /* WordItem.swift in Sources */,
 				598E804E27559A8B00CC61EA /* NewWordViewController.swift in Sources */,
 				59071C572754FFBF0043D48C /* SceneDelegate.swift in Sources */,
+				594AE86A2757B69B005926E7 /* AppState.swift in Sources */,
 				59DECA472756F0280000A9E9 /* LangPickerModel.swift in Sources */,
 				59DECA5E2756F0FD0000A9E9 /* LangPickerModelImpl.swift in Sources */,
-				598E80452755649300CC61EA /* Store.swift in Sources */,
 				59DECA3B2756EFB20000A9E9 /* LangPickerBuilder.swift in Sources */,
-				594534F42755F23E00DD9DF2 /* loggingMiddleware.swift in Sources */,
 				59DECA6727576C5C0000A9E9 /* NewWordModel.swift in Sources */,
 				598E806D27559BB300CC61EA /* NewWordViewController+Layout.swift in Sources */,
 				598E806527559B4900CC61EA /* Tagged.swift in Sources */,
@@ -785,9 +781,9 @@
 				59DECA6F27576C760000A9E9 /* NewWordModelImpl.swift in Sources */,
 				59DECA8627576CCD0000A9E9 /* NewWordBuilderImpl.swift in Sources */,
 				594535572756547B00DD9DF2 /* langPickerReducer.swift in Sources */,
+				594AE8722757B6AA005926E7 /* appReducer.swift in Sources */,
 				59DECA9A275770030000A9E9 /* LangRepositoryImpl.swift in Sources */,
 				594535152756006900DD9DF2 /* LangPickerPopup+Layout.swift in Sources */,
-				59DECA1C2756BDE10000A9E9 /* initAppState.swift in Sources */,
 				594535122756006900DD9DF2 /* LangPickerPopup.swift in Sources */,
 				59DECA4C2756F0730000A9E9 /* LangPickerView.swift in Sources */,
 				59DECA9527576FF70000A9E9 /* LangRepository.swift in Sources */,

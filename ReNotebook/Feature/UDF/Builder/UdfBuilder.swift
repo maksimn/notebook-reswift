@@ -7,4 +7,5 @@
 
 protocol UdfBuilder {
 
+    func createNewWordBuilder() -> NewWordBuilder
 }
