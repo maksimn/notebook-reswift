@@ -8,52 +8,25 @@
 import ReSwift
 import UIKit
 
-final class LangPickerViewImpl: UIView, StoreSubscriber {
+final class LangPickerViewImpl: UIView, LangPickerView {
 
+    private let params: LangPickerViewParams
     private var langPickerPopup: LangPickerPopup?
 
-    private let popupParams: LangPickerPopupParams
+    private let modelBlock: () -> LangPickerModel?
+    private lazy var model: LangPickerModel? = modelBlock()
 
-    private var state: LangPickerState? {
-        didSet {
-            guard let state = state else { return }
-            updateWith(state: state)
-        }
-    }
-
-    init(params: LangPickerViewParams) {
-        self.popupParams = LangPickerPopupParams(
-            staticContent: LangPickerPopupStaticContent(selectButtonTitle: params.staticContent.selectButtonTitle),
-            styles: LangPickerPopupStyles(backgroundColor: params.styles.backgroundColor)
-        )
+    init(params: LangPickerViewParams, modelBlock: @escaping () -> LangPickerModel?) {
+        self.params = params
+        self.modelBlock = modelBlock
         super.init(frame: .zero)
-        store.subscribe(self) { subcription in
-            subcription.select { state in state.langPicker }
-        }
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - StoreSubscriber
-
-    func newState(state: LangPickerState) {
-        self.state = state
-    }
-
-    // MARK: - Private
-
-    private func onSelectLang(_ lang: Lang) {
-        guard let state = state else { return }
-        store.dispatch(SelectLangAction(lang: lang, langType: state.selectedLangType))
-    }
-
-    private func onFinish() {
-        store.dispatch(HideLangPickerAction())
-    }
-
-    private func updateWith(state: LangPickerState) {
+    func set(_ state: LangPickerState) {
         if state.isHidden {
             langPickerPopup?.removeFromSuperview()
             langPickerPopup = nil
@@ -61,13 +34,15 @@ final class LangPickerViewImpl: UIView, StoreSubscriber {
         }
 
         langPickerPopup = LangPickerPopup(
-            params: popupParams,
+            params: params,
             initialLang: state.selectedLang,
             langPickerController: LangPickerController(langs: state.allLangs,
                                                        onSelectLang: { [weak self] lang in
-                                                         self?.onSelectLang(lang)
+                                                         self?.model?.selectLang(lang)
                                                        }),
-            onFinish: { [weak self] in self?.onFinish() }
+            onFinish: { [weak self] in
+                self?.model?.hideLangPicker()
+            }
         )
         addSubview(langPickerPopup ?? UIView())
         langPickerPopup?.snp.makeConstraints { make -> Void in

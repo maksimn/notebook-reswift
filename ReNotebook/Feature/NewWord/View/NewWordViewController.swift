@@ -44,16 +44,10 @@ class NewWordViewController: UIViewController, StoreSubscriber, UITextFieldDeleg
         super.viewDidLoad()
         initViews()
 
-        langPickerView = LangPickerViewImpl(
-            params: LangPickerViewParams(
-                staticContent: LangPickerViewStaticContent(
-                    selectButtonTitle: NSLocalizedString("Select", comment: "")
-                ),
-                styles: LangPickerViewStyles(
-                    backgroundColor: params.styles.backgroundColor
-                )
-            )
-        )
+        let langPickerBuilder = LangPickerBuilderImpl(store: store)
+        let langPickerGraph = langPickerBuilder.build()
+
+        langPickerView = langPickerGraph.uiview
         view.addSubview(langPickerView ?? UIView())
         langPickerView?.snp.makeConstraints { make -> Void in
             make.edges.equalTo(contentView)
@@ -111,6 +105,7 @@ class NewWordViewController: UIViewController, StoreSubscriber, UITextFieldDeleg
 
     private func sendNewWord() {
         guard let state = state else { return }
+        if state.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { return }
         let word = WordItem(text: state.text, sourceLang: state.sourceLang, targetLang: state.targetLang)
         store.dispatch(NewWordAction(word: word))
     }
