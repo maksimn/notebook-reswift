@@ -5,9 +5,11 @@
 //  Created by Maxim Ivanov on 01.12.2021.
 //
 
-protocol NewWordModel {
+protocol NewWordModel: AnyObject {
 
-    func updateNewWordText(text: String)
+    func loadLangData()
+
+    func updateNewWordText(_ text: String)
 
     func showLangPickerWith(selectedLangType: SelectedLangType)
 

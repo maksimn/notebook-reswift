@@ -40,6 +40,7 @@ class NewWordViewController: UIViewController, NewWordView, UITextFieldDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
+        model?.loadLangData()
     }
 
     func set(_ state: NewWordState) {
@@ -53,11 +54,11 @@ class NewWordViewController: UIViewController, NewWordView, UITextFieldDelegate 
 
     @objc
     func textFieldDidChange(_ textField: UITextField) {
-        model?.updateNewWordText(text: textField.text ?? "")
+        model?.updateNewWordText(textField.text ?? "")
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        sendNewWord()
+        model?.sendNewWord()
         return true
     }
 
@@ -65,26 +66,16 @@ class NewWordViewController: UIViewController, NewWordView, UITextFieldDelegate 
 
     @objc
     func onSourceLangLabelTap() {
-        showLangPickerView(selectedLangType: .source)
+        model?.showLangPickerWith(selectedLangType: .source)
     }
 
     @objc
     func onTargetLangLabelTap() {
-        showLangPickerView(selectedLangType: .target)
+        model?.showLangPickerWith(selectedLangType: .target)
     }
 
     @objc
     func onOkButtonTap() {
-        sendNewWord()
-    }
-
-    // MARK: - Private
-
-    private func showLangPickerView(selectedLangType: SelectedLangType) {
-        model?.showLangPickerWith(selectedLangType: selectedLangType)
-    }
-
-    private func sendNewWord() {
         model?.sendNewWord()
     }
 }

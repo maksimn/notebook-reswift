@@ -21,14 +21,13 @@ class NewWordModelImpl: NewWordModel, StoreSubscriber {
         }
     }
 
-    init(view: NewWordView, langRepository: LangRepository, store: Store<AppState>) {
+    init(view: NewWordView?, langRepository: LangRepository, store: Store<AppState>) {
         self.view = view
         self.langRepository = langRepository
         self.store = store
         store.subscribe(self) { subcription in
             subcription.select { state in state.newWord }
         }
-        loadLangData()
     }
 
     // MARK: - StoreSubscriber
@@ -39,7 +38,7 @@ class NewWordModelImpl: NewWordModel, StoreSubscriber {
 
     // MARK: - NewWordModel
 
-    func updateNewWordText(text: String) {
+    func updateNewWordText(_ text: String) {
         store.dispatch(NewWordTextChangedAction(text: text))
     }
 
@@ -58,9 +57,7 @@ class NewWordModelImpl: NewWordModel, StoreSubscriber {
         store.dispatch(NewWordAction(word: word))
     }
 
-    // MARK: - Private
-
-    private func loadLangData() {
+    func loadLangData() {
         store.dispatch(LoadLangDataAction(sourceLang: langRepository.sourceLang,
                                           targetLang: langRepository.targetLang))
     }

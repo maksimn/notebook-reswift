@@ -13,21 +13,27 @@ func newWordReducer(action: Action, state: NewWordState?) -> NewWordState {
     var state = state ?? empty
 
     switch action {
+
     case let loadLangDataAction as LoadLangDataAction:
         state.sourceLang = loadLangDataAction.sourceLang
         state.targetLang = loadLangDataAction.targetLang
+
     case let newWordTextChangedAction as NewWordTextChangedAction:
         state.text = newWordTextChangedAction.text
+
     case _ as ShowLangPickerAction:
         state.isLangPickerHidden = false
+
     case _ as HideLangPickerAction:
         state.isLangPickerHidden = true
+
     case let selectLangAction as SelectLangAction:
         if selectLangAction.langType == .source {
             state.sourceLang = selectLangAction.lang
         } else {
             state.targetLang = selectLangAction.lang
         }
+
     default:
         break
     }
